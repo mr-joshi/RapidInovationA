@@ -13,6 +13,8 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color:  ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
   gap: 16px;
   padding: 24px 16px;
   @media (max-width: 982px) {
@@ -96,6 +98,7 @@ padding:20px;
 text-align:center;
 display: flex;
 justify-content: center;
+color: ${(props) => props.theme.text};
 `
 
 const ContactUs = () => {

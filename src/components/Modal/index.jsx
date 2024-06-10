@@ -14,7 +14,8 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: white;
+background-color: ${(props) => props.theme.body};
+color: ${(props) => props.theme.text};
   padding: 20px;
   border-radius: 8px;
   position:absolute

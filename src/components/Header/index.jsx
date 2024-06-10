@@ -84,9 +84,9 @@ const Header = () => {
        <NavLink target="_blank" to="https://www.instagram.com/"><Icon><FaInstagram size={20} /></Icon></NavLink> 
        <NavLink target="_blank" to="https://www.facebook.com/"><Icon><FaFacebook size={20}/></Icon></NavLink> 
        <NavLink target="_blank" to="https://twitter.com/"><Icon><FaTwitter size={20} /></Icon></NavLink> 
-        
+       <ThemeToggle/>
+
       </NavLinks>
-      <ThemeToggle/>
     </NavContainer>
   );
 };

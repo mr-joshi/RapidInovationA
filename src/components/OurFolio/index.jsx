@@ -4,7 +4,8 @@ import { FaStore, FaShoppingBag, FaPen, FaImage } from 'react-icons/fa';
 
 const Section = styled.section`
   padding: 3rem 0;
-  background-color: white;
+  background-color:  ${(props) => props.theme.body};
+  
 `;
 const Container = styled.div`
   max-width: 1200px;
@@ -23,6 +24,8 @@ const Card = styled.div`
   padding: 16px;
   background-color: #fff;
   border-radius: 8px;
+  background-color:  ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
 `;
 
 const IconWrapper = styled.div`

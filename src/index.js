@@ -1,3 +1,4 @@
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -11,6 +12,12 @@ import { ThemeProvider } from 'styled-components';
 const ThemedApp = () => {
   const themeMode = useSelector((state) => state.theme.mode);
   
+  React.useEffect(() => {
+    document.body.style.backgroundColor = themeMode === 'light' ? lightTheme.body : darkTheme.body;
+    document.body.style.color = themeMode === 'light' ? lightTheme.text : darkTheme.text;
+
+  }, [themeMode]);
+
   return (
     <ThemeProvider theme={themeMode === 'light' ? lightTheme : darkTheme}>
       <App />
