@@ -8,6 +8,7 @@ import { store } from './store';
 import { Provider, useSelector } from 'react-redux';
 import { lightTheme, darkTheme } from './theme';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 
 const ThemedApp = () => {
   const themeMode = useSelector((state) => state.theme.mode);
@@ -28,7 +29,9 @@ const ThemedApp = () => {
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <BrowserRouter>
       <ThemedApp />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

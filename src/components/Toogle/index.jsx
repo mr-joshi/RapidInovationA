@@ -8,9 +8,10 @@ import { FaRegSun } from "react-icons/fa6";
 
 const Button = styled.button`
   background-color: transparent;
-  color: ${(props) => props.theme.text};
+  color:black;
   border: none;
   cursor: pointer;
+  padding:0;
 `;
 const Container=styled.div`
 display:flex;
@@ -31,10 +32,10 @@ console.log(  theme
   return (
     <Button onClick={handleToggle}>
     {theme === 'light' ? <Container>
-    <FaSun size={20}/>
+    <FaSun size={18}/>
     Dark
     </Container> : <Container>
-    <FaRegSun size={20}/>
+    <FaRegSun size={18}/>
     Light
     </Container>}
   </Button>

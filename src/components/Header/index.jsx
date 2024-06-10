@@ -5,13 +5,17 @@ import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { AiFillAmazonCircle } from "react-icons/ai";
 import ThemeToggle from '../Toogle/index'
 
+const Container= styled.nav`
+  background:white;
+
+`
 const NavContainer = styled.nav`
-  max-width: 1200px;
+  max-width:1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 40px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -25,23 +29,26 @@ const LogoContainer = styled(Link)`
   &:hover {
     color: gray;
   }
-
+  cursor:pointer;
 `;
 
 const LogoIcon=styled.div`
 color: black;
+cursor:pointer;
 `
 
 const LogoText = styled.span`
   font-size: 40px;
   font-weight: bold;
   color: black;
+  cursor:pointer;
+
 `;
 
 const NavLinks = styled.div`
   display: flex;
   justify-content:center;
-
+  align-items:center;
   gap:12px;
   space-x: 24px;
   @media (max-width: 768px) {
@@ -68,7 +75,7 @@ const Icon = styled.div`
 
 const Header = () => {
   return (
-    <NavContainer>
+    <Container>    <NavContainer>
       <LogoContainer to='/'>
         <LogoIcon><AiFillAmazonCircle size={40} /></LogoIcon>
         <LogoText>ASTRA</LogoText>
@@ -85,9 +92,10 @@ const Header = () => {
        <NavLink target="_blank" to="https://www.facebook.com/"><Icon><FaFacebook size={20}/></Icon></NavLink> 
        <NavLink target="_blank" to="https://twitter.com/"><Icon><FaTwitter size={20} /></Icon></NavLink> 
        <ThemeToggle/>
-
       </NavLinks>
     </NavContainer>
+    </Container>
+
   );
 };
 
