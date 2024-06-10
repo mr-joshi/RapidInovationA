@@ -6,8 +6,7 @@ import { AiFillAmazonCircle } from "react-icons/ai";
 import ThemeToggle from '../Toogle/index'
 
 const Container= styled.nav`
-  background:white;
-
+  background: linear-gradient(90deg, #140096, #8204FF, #B90CFF);
 `
 const NavContainer = styled.nav`
   max-width:1200px;
@@ -33,14 +32,14 @@ const LogoContainer = styled(Link)`
 `;
 
 const LogoIcon=styled.div`
-color: black;
+color: white;
 cursor:pointer;
 `
 
 const LogoText = styled.span`
   font-size: 40px;
   font-weight: bold;
-  color: black;
+  color: white;
   cursor:pointer;
 
 `;
@@ -52,14 +51,17 @@ const NavLinks = styled.div`
   gap:12px;
   space-x: 24px;
   @media (max-width: 768px) {
-    flex-direction: column;
     space-x: 0;
     space-y: 16px;
+  };
+  @media (max-width: 468px) {
+    font-size:12px;
   }
+    
 `;
 
 const NavLink = styled(Link)`
-  color: black;
+  color: white;
   text-decoration: none;
   &:hover {
     color: gray;
@@ -67,7 +69,7 @@ const NavLink = styled(Link)`
 `;
 
 const Icon = styled.div`
-  color: black;
+  color: white;
   height: 24px;
   width: 24px;
 `;

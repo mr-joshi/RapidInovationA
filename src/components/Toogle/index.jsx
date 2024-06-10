@@ -8,7 +8,7 @@ import { FaRegSun } from "react-icons/fa6";
 
 const Button = styled.button`
   background-color: transparent;
-  color:black;
+  color:white;
   border: none;
   cursor: pointer;
   padding:0;
