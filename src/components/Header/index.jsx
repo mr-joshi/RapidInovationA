@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { AiFillAmazonCircle } from "react-icons/ai";
-
+import ThemeToggle from '../Toogle/index'
 
 const NavContainer = styled.nav`
   max-width: 1200px;
@@ -86,6 +86,7 @@ const Header = () => {
        <NavLink target="_blank" to="https://twitter.com/"><Icon><FaTwitter size={20} /></Icon></NavLink> 
         
       </NavLinks>
+      <ThemeToggle/>
     </NavContainer>
   );
 };
