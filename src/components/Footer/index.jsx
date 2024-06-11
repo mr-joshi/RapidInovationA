@@ -23,10 +23,12 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+place-content: center; 
+justify-items: center; /* Center items horizontally within their cells */
+align-items: center; 
   @media (min-width: 768px) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -36,6 +38,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   space-y: 4px;
+  width:50%;
 `;
 
 const Title = styled.h5`
